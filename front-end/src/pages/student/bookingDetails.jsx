@@ -17,7 +17,7 @@ function BookingDetails() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            "http://localhost:3000/student/products",
+            `${import.meta.env.VITE_API_URL}/student/products`,
             {
                 method: "GET",
                 headers: {
@@ -41,7 +41,7 @@ function BookingDetails() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-            `http://localhost:3000/student/book/${id}`,
+            `${import.meta.env.VITE_API_URL}/student/book/${id}`,
             {
                 method: "POST",
                 headers: {

@@ -15,7 +15,7 @@ function login(){
             email : email,
             password : pass
         }
-        const responce = await fetch("http://localhost:3000/user/login", {
+        const responce = await fetch(`${import.meta.env.VITE_API_URL}/user/login`, {
             method : "POST",
             headers : {
                 "content-Type" : "application/json"

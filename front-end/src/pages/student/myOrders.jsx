@@ -11,7 +11,7 @@ function MyOrders() {
     }, [])
 
     async function display() {
-        const response = await fetch("http://localhost:3000/student/my-orders", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/student/my-orders`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ function MyOrders() {
 
     async function handleDelete(id) {
         const response = await fetch(
-            `http://localhost:3000/student/delete/${id}`,
+            `${import.meta.env.VITE_API_URL}/student/delete/${id}`,
             {
                 method: "DELETE",
                 headers: {

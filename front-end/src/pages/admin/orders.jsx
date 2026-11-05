@@ -7,7 +7,7 @@ function Orders() {
     }, []);
     async function getOrders() {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3000/admin/orders", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/orders`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -21,7 +21,7 @@ function Orders() {
     }
     async function changeStatus(id, value){
         const token = localStorage.getItem("token");
-        const data = await fetch(`http://localhost:3000/admin/orders/${id}/status`, {
+        const data = await fetch(`${import.meta.env.VITE_API_URL}/admin/orders/${id}/status`, {
             method : "PATCH",
             headers : {
                 "Content-Type" : "application/json",

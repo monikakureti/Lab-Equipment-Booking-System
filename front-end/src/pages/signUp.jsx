@@ -20,7 +20,7 @@ function SignUp(){
             password : pass,
             role : role
         }
-        const responce = await fetch("http://localhost:3000/user/register", {
+        const responce = await fetch(`${import.meta.env.VITE_API_URL}/user/register`, {
             method : "POST",
             headers : {
                 "content-Type" : "application/json" 

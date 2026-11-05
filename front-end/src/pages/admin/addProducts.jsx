@@ -11,7 +11,7 @@ function Add(){
             name : name,
             capacity : num
         }
-        const responce = await fetch("http://localhost:3000/admin/add", {
+        const responce = await fetch(`${import.meta.env.VITE_API_URL}/admin/add`, {
             method : "POST",
             headers : {
                 "Content-Type" : "application/json",
