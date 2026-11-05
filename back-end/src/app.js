@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-  origin: "https://lab-equipment-booking-system-three.vercel.app/"
+  origin: "https://lab-equipment-booking-system-three.vercel.app"
 }));
 app.use(express.json());
 
