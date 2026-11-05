@@ -5,9 +5,7 @@ const studentRoute = require("./routes/studentRoute");
 const cors = require("cors");
 
 const app = express();
-app.use(cors({
-  origin: "https://lab-equipment-booking-system-three.vercel.app"
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use("/admin", adminRoute);
